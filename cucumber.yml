@@ -1,0 +1,3 @@
+default: --no-source --color --format pretty
+
+cadastro: -t @cadastro -f html -o report1.html
