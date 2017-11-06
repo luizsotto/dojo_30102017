@@ -5,7 +5,7 @@ class CreatedTask <SitePrism::Page
 	element :due_date_field		, "input[id='date_due_date']"
 	element :priority_field		, "select[id='priority']"
 	element :description_field	, "textarea[id='description']"
-	element :created_button		, "input[id='bigbutton']"
+	element :created_button		, :xpath, ".//*[@id='EditView']/div[contains(@class,'buttons')]/input[@id='SAVE']"
 
 
 	def fillOutForm (subject, status, startDate, dueDate, priority, description)
