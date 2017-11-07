@@ -9,5 +9,5 @@ Quando("realizar o cadastro da nova task com os dados {string}, {string}, {strin
 end
 
 Entao("a tela TaskOverview será mostrada") do
- expect(TaskOverview.new.title_aba_field.text).to eq("TASK OVERVIEW")
+ 	expect(TaskOverview.new.title_aba_field.text).to eq("TASK OVERVIEW")
 end
