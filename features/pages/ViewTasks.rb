@@ -1,6 +1,7 @@
+# Não foi possível utilizar o Section
 class SearchDialog < SitePrism::Section
-	element :name_basic_field, 	"input[id='name_basic']"
-	element :search_button, 	"input[id='search_form_submit']"
+	element :name_basic_field, 	"input[@id='name_basic']"
+	element :search_button, 	"input[@id='search_form_submit']"
 end
 
 
@@ -11,10 +12,13 @@ class ViewTasks <SitePrism::Page
 	section :search_modal, SearchDialog, 'div#searchDialog'
 
 	def filtrateByName(subject)
+		sleep 3
 		filter_link.click
 #		binding.pry
-		search_modal.name_basic_field.set(subject)
-		search_modal.search_button.click 
+		#search_modal.name_basic_field.set(subject)
+		#search_modal.search_button.click
+		page.find(:xpath, ".//input[@id='name_basic']").set(subject)		
+		page.find(:xpath, ".//input[@id='search_form_submit']").click
 	end
 
 end
