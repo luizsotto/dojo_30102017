@@ -1,7 +1,7 @@
 #language: pt
 #utf-8
 @editTask
-Funcionalidade: Cadastrar Task
+Funcionalidade: Editar Task
 Eu como usuário
 Quero realizar uma edição numa task que fui criada no site SuiteCRM
 
@@ -16,4 +16,4 @@ Quero realizar uma edição numa task que fui criada no site SuiteCRM
 	Exemplos: 
 	| Subject		| Status		|
 	| Luiz Dojo 2	| Pending Input	|	
-#	| Teste2		| Pending Input	|
+	| Teste2		| Pending Input	|

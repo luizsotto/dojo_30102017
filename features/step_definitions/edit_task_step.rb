@@ -4,9 +4,11 @@ Quando("realizar uma pesquisa pelo nome da task  {string}") do |subject|
 end
 
 Quando("realizar uma alteração no Status da task para {string}") do |status|
-  Created.new.updateStatusForm(status)
+	ViewTasks.new.toEdit
+  	CreatedTask.new.fillOutForm("", status, "", "", "", "")
+  	$novo_statu = status
 end
 
 Entao("sera exibido a pagina que contem os dados da task com o novo Status") do
-  #pending # Write code here that turns the phrase above into concrete actions
+ 	expect(TaskOverview.new.status_field.text).to eq($novo_statu)
 end

@@ -9,12 +9,24 @@ class CreatedTask <SitePrism::Page
 
 
 	def fillOutForm (subject, status, startDate, dueDate, priority, description)
-		subject_field.set(subject)
-		status_field.find(:xpath, ".//option[text()='"+status+"']").select_option
-		start_date_field.set(startDate)
-		due_date_field.set(dueDate)
-		priority_field.find(:xpath, ".//option[text()='"+priority+"']").select_option
-		description_field.set(description)
+		if !(subject.empty?) 
+			subject_field.set(subject)
+		end
+		if !(status.empty?)
+			status_field.find(:xpath, ".//option[text()='"+status+"']").select_option
+		end
+		if !(startDate.empty?)
+			start_date_field.set(startDate)
+		end
+		if !(dueDate.empty?)
+			due_date_field.set(dueDate)
+		end	
+		if !(priority.empty?)
+			priority_field.find(:xpath, ".//option[text()='"+priority+"']").select_option
+		end
+		if !(description.empty?)	
+			description_field.set(description)
+		end
 		created_button.click
 	end
 

@@ -3,3 +3,5 @@ default: --no-source --color --format pretty
 createTask: -t @createTask -f html --out result/report_createTask_<%= Time.now.strftime("%Y%m%d-%H%M%S") %>.html
 
 editTask: -t @editTask -f pretty -f html --out result/report_editTask_<%= Time.now.strftime("%Y%m%d-%H%M%S") %>.html
+
+deletTask: -t @deletTask -f pretty -f html --out result/report_deletTask_<%= Time.now.strftime("%Y%m%d-%H%M%S") %>.html

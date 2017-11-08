@@ -15,4 +15,4 @@ Quero realizar um cadastro de uma nova task no site SuiteCRM
 	Exemplos: 
 	| Subject		| Status		| Start Date	| Due Date		| Priority	| Description	|
 	| Luiz Dojo 2	| Not Started	| 05/11/2017 	| 05/11/2017	| Low		| Teste1		|
-#	| Teste2		| Not Started	| 05/11/2017 	| 05/11/2017	| Low		| Teste2		|
+	| Teste2		| Not Started	| 05/11/2017 	| 05/11/2017	| Low		| Teste2		|
